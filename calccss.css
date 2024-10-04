@@ -1,24 +1,16 @@
 *{
-    background-color: rgb(0, 0, 0);
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: rgb(22, 21, 21);
-    font-family: Arial, sans-serif;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
 }
 
 .main_calc {
     background-image: url('background.jpg');
     border: 5px groove;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgb(179, 0, 255);
-    height: 480px;
+    height: 485px;
     width: 300px;
-    padding: 20px;s
+    padding: 20px;
 }
 
 .display_screen {
@@ -31,6 +23,7 @@ body {
     height: 100px;
     font-size: 30px;
     text-align: right;
+    background-color: rgb(0, 0, 0);
     color: white;
     border-color: rgb(179, 0, 255);
     border-radius: 10px;
@@ -53,7 +46,8 @@ body {
 
 button {
     flex: 1;
-    height: 60px;
+    height: 65px;
+    width: 65px;
     font-size: 18px;
     margin: 0 5px;
     border: none;
@@ -82,4 +76,78 @@ button:hover {
 
 [name = "numeric"]:hover {
     background-color: #853cae; 
+}
+
+/* Glow Flicker effect */
+
+.glow {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 20px rgb(245, 220, 255), 0 0 40px rgb(179, 96, 214), 0 0 70px rgb(179, 0, 255);
+    border-radius: 15px;
+    animation-name: glow-flicker;
+    animation-delay: 0;
+    animation-duration: 0.5s;
+    animation-iteration-count: forwards;
+}
+
+@keyframes glow-flicker {
+    0%, 100% {
+        opacity: 0.8;
+        box-shadow: 0 0 20px rgb(245, 220, 255), 0 0 40px rgb(179, 96, 214), 0 0 70px rgb(179, 0, 255);
+    }
+    10% {
+        opacity: 0.8;
+        box-shadow: 0 0 20px rgb(245, 220, 255), 0 0 40px rgb(179, 96, 214);
+    }
+    20% {
+        opacity: 0.8;
+        box-shadow: 0 0 20px rgb(245, 220, 255), 0 0 40px rgb(179, 96, 214), 0 0 70px rgb(179, 0, 255);
+    }
+    30% {
+        opacity: 0.6;
+        box-shadow: 0 0 20px rgb(245, 220, 255), 0 0 40px rgb(179, 96, 214);
+    }
+    40% {
+        opacity: 0.8;
+        box-shadow: 0 0 20px rgb(245, 220, 255), 0 0 40px rgb(179, 96, 214), 0 0 70px rgb(179, 0, 255);
+    }
+    50% {
+        opacity: 0.5;
+        box-shadow: 0 0 20px rgb(245, 220, 255), 0 0 40px rgb(179, 96, 214);
+    }
+    60% {
+        opacity: 0.8;
+        box-shadow: 0 0 20px rgb(245, 220, 255), 0 0 40px rgb(179, 96, 214), 0 0 70px rgb(179, 0, 255);
+    }
+}
+
+/*  Stars animation  */
+
+.bg_stars {   /*  this is also the background  */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+
+.stars {
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0;
+    animation: star-flicker 1s infinite;
+}
+
+@keyframes star-flicker {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
 }
