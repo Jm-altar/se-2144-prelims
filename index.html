@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="calccss.css">
+    </head>
+    <body>
+        <!-- Main calculator parts -->
+        <div id = "bgs" class = "bg_stars">
+            <div id = "mc" class = "main_calc">
+                <div class = "display_screen">
+                    <input type = "text" id = "disp_sc" readonly/>
+                </div>
+                <div class = "all_buttons">
+                    <div class="row">
+                        <button name = "operator" class = "main_btn" id="b_allclear">AC</button>
+                        <button name = "operator" class = "sub_btn" id="b_bye">Bye</button>
+                        <button name = "operator" class = "sub_btn" id="b_hello">Hello</button>
+                        <button name = "operator" class = "sub_btn" id="b_backspace">&larr;</button>
+                    </div>
+                    <div class="row">
+                        <button name = "numeric" class = "sub_btn" id="b_seven">7</button>
+                        <button name = "numeric" class = "sub_btn" id="b_eight">8</button>
+                        <button name = "numeric" class = "sub_btn" id="b_nine">9</button>
+                        <button class = "sub_btn" id="b_div">&divide;</button>
+                    </div>
+                    <div class="row">
+                        <button name = "numeric" class = "sub_btn" id="b_four">4</button>
+                        <button name = "numeric" class = "sub_btn" id="b_five">5</button>
+                        <button name = "numeric" class = "sub_btn" id="b_six">6</button>
+                        <button class = "sub_btn" id="b_mult">&times;</button>
+                    </div>
+                    <div class="row">
+                        <button name = "numeric" class = "sub_btn" id="b_one">1</button>
+                        <button name = "numeric" class = "sub_btn" id="b_two">2</button>
+                        <button name = "numeric" class = "sub_btn" id="b_three">3</button>
+                        <button class = "sub_btn" id="b_sub">-</button>
+                    </div>
+                    <div class="row">
+                        <button name = "numeric" class = "sub_btn" id= "b_zero">0</button>
+                        <button name = "numeric" class = "sub_btn" id ="b_dec">.</button>
+                        <button class = "sub_btn" id = "b_equals">=</button>
+                        <button class = "sub_btn" id = "b_add">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Script -->
+        <script src = "calcjs.js"></script> 
+    </body>
+</html>
